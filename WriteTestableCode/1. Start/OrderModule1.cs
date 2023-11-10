@@ -1,6 +1,6 @@
 ﻿namespace WriteTestableCode.SingleResponsibility;
 
-public class OrderModule
+public class OrderModule1
 {
     public void Order(HardwareType type, int number)
     {
@@ -12,32 +12,33 @@ public class OrderModule
         
         // Order hardware with api
         var apiCaller = new APICaller();
-        ApiResult result;
+        var result = apiCaller.PlaceOrder(type, number);
+        if (!result)
+        {
+            throw new Exception("Order failed");
+        }
+
+        // Calculate price
+        var price = 0;
         switch (type)
         {
             case HardwareType.Laptop:
-                result = apiCaller.OrderLaptops(number);
+                price = 1200 * number;
                 break;
             case HardwareType.Monitor:
-                result = apiCaller.OrderMonitors(number);
+                price = 250 * number;
                 break;
             case HardwareType.Desk:
-                result = apiCaller.OrderDesks(number);
+                price = 550 * number;
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(type), type, null);
-        }
-
-        
-        if (!result.HasSucceeded)
-        {
-            throw new Exception("Order failed");
         }
         
         // Compose and send email
         var address = "itbusiness@example.com";
         var orderDetails = $"{number} of {type}";
-        var invoiceDetails = $"Customer email: {address}\nDetails: {orderDetails}\nPrice: {result.Price}";
+        var invoiceDetails = $"Customer email: {address}\nDetails: {orderDetails}\nPrice: {price}";
         var email = new Email()
         {
             To = address,

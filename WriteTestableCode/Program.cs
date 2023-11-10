@@ -2,7 +2,7 @@
 
 using WriteTestableCode.SingleResponsibility;
 
-var orderModule = new OrderModule();
+var orderModule = new OrderModule1();
 
 orderModule.Order(HardwareType.Laptop, 3);
 orderModule.Order(HardwareType.Monitor, 6);
