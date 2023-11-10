@@ -1,11 +1,11 @@
 ﻿using FluentAssertions;
-using WriteTestableCode._2._SRP;
+using WriteTestableCode._3._OCP;
 using WriteTestableCode.Libraries;
 using WriteTestableCode.Shared;
 
 namespace WriteTestableCode.Test;
 
-public class OrderModule2Tests
+public class OrderModule3Tests
 {
     [Test]
     [TestCase(HardwareType.Laptop, 3, 3600)]

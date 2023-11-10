@@ -1,4 +1,4 @@
-﻿namespace WriteTestableCode._3._OCP;
+﻿namespace WriteTestableCode._3._OCP.Validators;
 
 public interface IValidator
 {

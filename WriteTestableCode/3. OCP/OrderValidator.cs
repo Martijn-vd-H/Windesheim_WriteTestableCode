@@ -1,4 +1,6 @@
-﻿namespace WriteTestableCode._3._OCP;
+﻿using WriteTestableCode._3._OCP.Validators;
+
+namespace WriteTestableCode._3._OCP;
 
 public class OrderValidator
 {

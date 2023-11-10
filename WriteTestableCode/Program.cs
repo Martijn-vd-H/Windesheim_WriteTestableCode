@@ -2,7 +2,7 @@
 
 using WriteTestableCode._1._Start;
 using WriteTestableCode._3._OCP;
-using WriteTestableCode.SingleResponsibility;
+using WriteTestableCode.Shared;
 
 var orderModule = new OrderModule3();
 

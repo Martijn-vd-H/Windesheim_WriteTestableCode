@@ -1,6 +1,6 @@
-﻿using WriteTestableCode.SingleResponsibility;
+﻿using WriteTestableCode.Shared;
 
-namespace WriteTestableCode._3._OCP;
+namespace WriteTestableCode._3._OCP.Validators;
 
 public class OrderTypeValidator : IValidator
 {

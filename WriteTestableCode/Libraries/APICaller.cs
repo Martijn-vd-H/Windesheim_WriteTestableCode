@@ -1,4 +1,4 @@
-﻿using WriteTestableCode.SingleResponsibility;
+﻿using WriteTestableCode.Shared;
 
 namespace WriteTestableCode.Libraries;
 

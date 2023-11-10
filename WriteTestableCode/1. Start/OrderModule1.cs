@@ -1,5 +1,5 @@
 ﻿using WriteTestableCode.Libraries;
-using WriteTestableCode.SingleResponsibility;
+using WriteTestableCode.Shared;
 
 namespace WriteTestableCode._1._Start;
 
@@ -8,7 +8,7 @@ public class OrderModule1
     public void Order(HardwareType type, int number)
     {
         // Validation
-        if (number < 0 || number > 30)
+        if (number < 1 || number > 30)
         {
             throw new ArgumentException($"Order {number} of type {type} seems incorrect");
         }

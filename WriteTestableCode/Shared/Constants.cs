@@ -1,4 +1,4 @@
-﻿namespace WriteTestableCode.SingleResponsibility;
+﻿namespace WriteTestableCode.Shared;
 
 public static class Constants
 {
@@ -6,6 +6,6 @@ public static class Constants
     {
         {HardwareType.Laptop, 1200},
         {HardwareType.Monitor, 250},
-        {HardwareType.Desk, 500},
+        {HardwareType.Desk, 550},
     };
 }

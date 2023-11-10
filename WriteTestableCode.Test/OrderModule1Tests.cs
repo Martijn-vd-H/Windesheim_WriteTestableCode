@@ -1,5 +1,5 @@
 ﻿using WriteTestableCode._1._Start;
-using WriteTestableCode.SingleResponsibility;
+using WriteTestableCode.Shared;
 
 namespace WriteTestableCode.Test;
 

@@ -1,4 +1,4 @@
-﻿namespace WriteTestableCode.SingleResponsibility;
+﻿namespace WriteTestableCode.Shared;
 
 public enum HardwareType
 {

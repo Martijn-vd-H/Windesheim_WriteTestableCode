@@ -1,5 +1,5 @@
 ﻿using WriteTestableCode.Libraries;
-using WriteTestableCode.SingleResponsibility;
+using WriteTestableCode.Shared;
 
 namespace WriteTestableCode._2._SRP;
 
