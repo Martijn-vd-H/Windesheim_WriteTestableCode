@@ -1,4 +1,6 @@
-﻿namespace WriteTestableCode.SingleResponsibility;
+﻿using WriteTestableCode.SingleResponsibility;
+
+namespace WriteTestableCode.Libraries;
 
 public class APICaller
 {

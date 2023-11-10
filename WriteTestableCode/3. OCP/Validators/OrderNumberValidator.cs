@@ -1,8 +1,8 @@
-﻿namespace WriteTestableCode._2._SRP;
+﻿namespace WriteTestableCode._3._OCP;
 
-public class OrderValidator
+public class OrderNumberValidator : IValidator
 {
-    public void ThrowOnValidationFailed(OrderParameters orderParameters)
+    public void ThrowOnValidationError(OrderParameters orderParameters)
     {
         if (orderParameters.Number < 1 || orderParameters.Number > 30)
         {

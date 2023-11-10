@@ -1,6 +1,6 @@
 ﻿using WriteTestableCode.SingleResponsibility;
 
-namespace WriteTestableCode._2._SRP;
+namespace WriteTestableCode._3._OCP;
 
 public class PriceCalculator
 {

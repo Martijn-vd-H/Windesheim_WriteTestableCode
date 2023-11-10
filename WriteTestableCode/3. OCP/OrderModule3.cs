@@ -1,13 +1,13 @@
 ﻿using WriteTestableCode.Libraries;
 using WriteTestableCode.SingleResponsibility;
 
-namespace WriteTestableCode._2._SRP;
+namespace WriteTestableCode._3._OCP;
 
-public class OrderModule2
+public class OrderModule3
 {
     public void Order(HardwareType type, int number)
     {
-        var orderParameters = new OrderParameters(type, number); // TODO place at OCP step?
+        var orderParameters = new OrderParameters(type, number);
             
         // Validation
         var validator = new OrderValidator();

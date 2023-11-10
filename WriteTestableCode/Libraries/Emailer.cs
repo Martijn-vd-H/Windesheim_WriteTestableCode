@@ -1,4 +1,4 @@
-﻿namespace WriteTestableCode.SingleResponsibility;
+﻿namespace WriteTestableCode.Libraries;
 
 public abstract class Emailer
 {
