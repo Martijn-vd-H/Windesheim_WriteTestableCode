@@ -1,18 +1,19 @@
 ﻿using WriteTestableCode.Libraries;
+using WriteTestableCode.Shared;
 
 namespace WriteTestableCode._2._SRP;
 
 public class EmailComposer
 {
-    public Email ComposeEmail(string address, int price, OrderParameters orderParameters)
+    public Email ComposeEmail(string address, int price, HardwareType type, int number)
     {
-        var orderDetails = $"{orderParameters.Number} of {orderParameters.Type}";
+        var orderDetails = $"{number} of {type}";
         var invoiceDetails = $"Customer email: {address}\nDetails: {orderDetails}\nPrice: {price}";
         return new Email
         {
             To = address,
             From = "Ordermodule@example.com",
-            Header = $"Invoice {orderParameters.Type}",
+            Header = $"Invoice {type}",
             Body = invoiceDetails,
         };
     }

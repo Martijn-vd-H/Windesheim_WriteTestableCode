@@ -7,23 +7,21 @@ public class OrderModule2
 {
     public void Order(HardwareType type, int number)
     {
-        var orderParameters = new OrderParameters(type, number); // TODO place at OCP step?
-            
         // Validation
         var validator = new OrderValidator();
-        validator.ThrowOnValidationFailed(orderParameters);
+        validator.ThrowOnValidationFailed(type, number);
         
         // Order hardware with api
         var orderService = new OrderService();
-        orderService.PlaceOrder(orderParameters);
+        orderService.PlaceOrder(type, number);
 
         // Calculate price
         var priceCalculator = new PriceCalculator();
-        var price = priceCalculator.Calculate(orderParameters);
+        var price = priceCalculator.Calculate(type, number);
 
         // Compose and send email
         var emailComposer = new EmailComposer();
-        var email = emailComposer.ComposeEmail("itbusiness@example.com", price, orderParameters);
+        var email = emailComposer.ComposeEmail("itbusiness@example.com", price, type, number);
        
         Emailer.SendEmail(email);
 

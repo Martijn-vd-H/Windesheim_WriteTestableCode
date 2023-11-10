@@ -1,12 +1,14 @@
-﻿namespace WriteTestableCode._2._SRP;
+﻿using WriteTestableCode.Shared;
+
+namespace WriteTestableCode._2._SRP;
 
 public class OrderValidator
 {
-    public void ThrowOnValidationFailed(OrderParameters orderParameters)
+    public void ThrowOnValidationFailed(HardwareType type, int number)
     {
-        if (orderParameters.Number < 1 || orderParameters.Number > 30)
+        if (number < 1 || number > 30)
         {
-            throw new ArgumentException($"Order {orderParameters.Number} of type {orderParameters.Type} seems incorrect");
+            throw new ArgumentException($"Order {number} of type {type} seems incorrect");
         }
     }
 }

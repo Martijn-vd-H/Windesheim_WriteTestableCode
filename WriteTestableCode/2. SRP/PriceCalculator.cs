@@ -4,22 +4,22 @@ namespace WriteTestableCode._2._SRP;
 
 public class PriceCalculator
 {
-    public int Calculate(OrderParameters orderParameters)
+    public int Calculate(HardwareType type, int number)
     {
         var price = 0;
-        switch (orderParameters.Type)
+        switch (type)
         {
             case HardwareType.Laptop:
-                price = 1200 * orderParameters.Number;
+                price = 1200 * number;
                 break;
             case HardwareType.Monitor:
-                price = 250 * orderParameters.Number;
+                price = 250 * number;
                 break;
             case HardwareType.Desk:
-                price = 550 * orderParameters.Number;
+                price = 550 * number;
                 break;
             default:
-                throw new ArgumentOutOfRangeException(nameof(orderParameters.Type), orderParameters.Type, null);
+                throw new ArgumentOutOfRangeException(nameof(type), type, null);
         }
 
         return price;

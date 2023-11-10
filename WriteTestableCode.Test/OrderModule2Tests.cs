@@ -15,10 +15,9 @@ public class OrderModule2Tests
     {
         // Arrange
         var priceCalculator = new PriceCalculator();
-        var orderParameters = new OrderParameters(type, number);
         
         // Act
-        var price = priceCalculator.Calculate(orderParameters);
+        var price = priceCalculator.Calculate(type, number);
 
         // Assert
         Assert.That(price, Is.EqualTo(expectedPrice));
@@ -32,10 +31,9 @@ public class OrderModule2Tests
     {
         // Arrange
         var validator = new OrderValidator();
-        var orderParameters = new OrderParameters(type, number);
         
         // Act/Assert
-        Assert.Throws<ArgumentException>(() => validator.ThrowOnValidationFailed(orderParameters));
+        Assert.Throws<ArgumentException>(() => validator.ThrowOnValidationFailed(type, number));
     }
     
     [Test]
@@ -46,10 +44,9 @@ public class OrderModule2Tests
     {
         // Arrange
         var validator = new OrderValidator();
-        var orderParameters = new OrderParameters(type, number);
 
         // Act
-        validator.ThrowOnValidationFailed(orderParameters);
+        validator.ThrowOnValidationFailed(type, number);
         
         // Assert
         Assert.Pass();
@@ -64,10 +61,9 @@ public class OrderModule2Tests
         var type = HardwareType.Desk;
         var price = 300;
         var number = 2;
-        var orderParameters = new OrderParameters(type, number);
 
         // Act
-        var email = composer.ComposeEmail(address, price, orderParameters);
+        var email = composer.ComposeEmail(address, price, type, number);
         
         // Arrange
         var expectedEmail = new Email
