@@ -8,7 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="4. LSP\" />
       <Folder Include="6. DIP\" />
     </ItemGroup>
 
