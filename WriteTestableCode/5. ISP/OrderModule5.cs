@@ -1,9 +1,9 @@
 ﻿using WriteTestableCode.Libraries;
 using WriteTestableCode.Shared;
 
-namespace WriteTestableCode._3._OCP;
+namespace WriteTestableCode._5._ISP;
 
-public class OrderModule3
+public class OrderModule5
 {
     private IOutputService _outputService = new ConsoleOutputService();
     
@@ -33,9 +33,10 @@ public class OrderModule3
         var email = emailComposer.ComposeEmail("itbusiness@example.com", price, orderParameters);
        
         Emailer.SendEmail(email);
-        
-        // Output processing information
+
         var outputService = _outputService;
+      
+        // TODO ISP and LSP violation. Add to earlier stages so we can fix it in 4. and 5.
         if (_outputService is ConsoleOutputService)
         {
             outputService.SetColor(ConsoleColor.Green);
@@ -46,5 +47,6 @@ public class OrderModule3
         }
         
         outputService.WriteLine("Order processed");
+
     }
 }
