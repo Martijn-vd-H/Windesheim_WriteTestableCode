@@ -11,6 +11,7 @@ Type in the terminal:
 
 - `dotnet build`
 - `dotnet test`
+  - Run specific test class: `dotnet test --filter <classname>` eg. `dotnet test --filter OrderModule1Tests`
 - `dotnet run --project WriteTestableCode`
 
 ## Structure
