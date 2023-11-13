@@ -1,5 +1,4 @@
 ﻿using WriteTestableCode.Shared.Libraries;
-using WriteTestableCode.Solutions._4._LSP___ISP;
 
 namespace WriteTestableCode.Solutions._5._DIP;
 
