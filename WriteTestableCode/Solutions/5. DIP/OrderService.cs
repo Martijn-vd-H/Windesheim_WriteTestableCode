@@ -2,7 +2,7 @@
 
 namespace WriteTestableCode.Solutions._5._DIP;
 
-public class OrderService
+public class OrderService : IOrderService
 {
     public void PlaceOrder(OrderParameters orderParameters)
     {

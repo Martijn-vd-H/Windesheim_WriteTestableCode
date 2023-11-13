@@ -2,7 +2,7 @@
 
 namespace WriteTestableCode.Solutions._5._DIP;
 
-public class OrderValidator
+public class OrderValidator : IOrderValidator
 {
     public void ThrowOnValidationFailed(OrderParameters orderParameters)
     {

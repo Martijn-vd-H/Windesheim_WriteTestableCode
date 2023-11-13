@@ -7,13 +7,17 @@ public class OrderModule5
     private readonly IEmailer _emailer;
     private readonly IEmailComposer _emailComposer;
     private readonly IPriceCalculator _pricingCalculator;
+    private readonly IOrderValidator _orderValidator;
+    private readonly IOrderService _orderService;
     private IOutputService _outputService = new ConsoleOutputService();
 
-    public OrderModule5(IEmailer emailer, IEmailComposer emailComposer, IPriceCalculator pricingCalculator)
+    public OrderModule5(IEmailer emailer, IEmailComposer emailComposer, IPriceCalculator pricingCalculator, IOrderValidator orderValidator, IOrderService orderService)
     {
         _emailer = emailer;
         _emailComposer = emailComposer;
         _pricingCalculator = pricingCalculator;
+        _orderValidator = orderValidator;
+        _orderService = orderService;
     }
     
     public void SetOutputService(IOutputService outputService)
@@ -26,12 +30,10 @@ public class OrderModule5
         var orderParameters = new OrderParameters(type, number);
             
         // Validation
-        var validator = new OrderValidator();
-        validator.ThrowOnValidationFailed(orderParameters);
+        _orderValidator.ThrowOnValidationFailed(orderParameters);
         
         // Order hardware with api
-        var orderService = new OrderService();
-        orderService.PlaceOrder(orderParameters);
+        _orderService.PlaceOrder(orderParameters);
 
         // Calculate price
         var price = _pricingCalculator.Calculate(orderParameters);
