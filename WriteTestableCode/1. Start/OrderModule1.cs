@@ -1,5 +1,5 @@
-﻿using WriteTestableCode.Libraries;
-using WriteTestableCode.Shared;
+﻿using WriteTestableCode.Shared;
+using WriteTestableCode.Shared.Libraries;
 
 namespace WriteTestableCode._1._Start;
 

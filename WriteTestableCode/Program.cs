@@ -1,8 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using WriteTestableCode._1._Start;
-using WriteTestableCode._3._OCP;
 using WriteTestableCode.Shared;
+using WriteTestableCode.Solutions._3._OCP;
 
 var orderModule = new OrderModule3();
 

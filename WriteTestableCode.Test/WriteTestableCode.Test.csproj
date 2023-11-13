@@ -22,4 +22,8 @@
       <ProjectReference Include="..\WriteTestableCode\WriteTestableCode.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Solutions\4. LSP &amp; ISP\" />
+    </ItemGroup>
+
 </Project>

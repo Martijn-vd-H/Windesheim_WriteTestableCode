@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="6. DIP\" />
+      <Folder Include="Solutions\6. DIP\" />
     </ItemGroup>
 
 </Project>
