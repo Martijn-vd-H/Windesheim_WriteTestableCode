@@ -4,9 +4,11 @@ using WriteTestableCode._1._Start;
 using WriteTestableCode.Shared;
 using WriteTestableCode.Solutions._3._OCP;
 
-var orderModule = new OrderModule3();
+var orderModule = new OrderModule1();
 
 orderModule.Order(HardwareType.Laptop, 3);
 orderModule.Order(HardwareType.Monitor, 6);
 orderModule.Order(HardwareType.Desk, 2);
-orderModule.Order(HardwareType.Mouse, 2);
+
+// Available from order module 3
+//orderModule.Order(HardwareType.Mouse, 2);
