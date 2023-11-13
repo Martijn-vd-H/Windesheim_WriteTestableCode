@@ -11,6 +11,7 @@ Type in the terminal:
 
 - `dotnet build`
 - `dotnet test`
+- `dotnet run --project WriteTestableCode`
 
 ## Structure
 
