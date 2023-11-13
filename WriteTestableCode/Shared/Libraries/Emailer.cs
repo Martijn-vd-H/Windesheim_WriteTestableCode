@@ -1,6 +1,6 @@
 ﻿namespace WriteTestableCode.Shared.Libraries;
 
-public abstract class Emailer
+public class Emailer
 {
     public static void SendEmail(Email email)
     {
