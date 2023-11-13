@@ -2,11 +2,11 @@
 using NSubstitute;
 using WriteTestableCode.Shared;
 using WriteTestableCode.Shared.Libraries;
-using WriteTestableCode.Solutions._6._DIP;
+using WriteTestableCode.Solutions._5._DIP;
 
 namespace WriteTestableCode.Test.Solutions._6._OCP;
 
-public class OrderModule6Tests
+public class OrderModule5Tests
 {
     [Test]
     [TestCase(HardwareType.Laptop, 3, 3600)]
@@ -86,7 +86,7 @@ public class OrderModule6Tests
     {
         // Arrange
         var emailSenderMock = Substitute.For<IEmailer>();
-        var orderModule = new OrderModule6(emailSenderMock, Substitute.For<IEmailComposer>(), Substitute.For<PriceCalculator>());
+        var orderModule = new OrderModule5(emailSenderMock, Substitute.For<IEmailComposer>(), Substitute.For<PriceCalculator>());
         
         // Act
         orderModule.Order(HardwareType.Desk, 5);
@@ -100,7 +100,7 @@ public class OrderModule6Tests
     {
         // Arrange
         var emailComposerMock = Substitute.For<IEmailComposer>();
-        var orderModule = new OrderModule6(Substitute.For<IEmailer>(), emailComposerMock, Substitute.For<PriceCalculator>());
+        var orderModule = new OrderModule5(Substitute.For<IEmailer>(), emailComposerMock, Substitute.For<PriceCalculator>());
         
         // Act
         orderModule.Order(HardwareType.Laptop, 5);
@@ -114,7 +114,7 @@ public class OrderModule6Tests
     {
         // Arrange
         var pricingCalculatorMock = Substitute.For<IPriceCalculator>();
-        var orderModule = new OrderModule6(Substitute.For<IEmailer>(), Substitute.For<IEmailComposer>(), pricingCalculatorMock);
+        var orderModule = new OrderModule5(Substitute.For<IEmailer>(), Substitute.For<IEmailComposer>(), pricingCalculatorMock);
         
         // Act
         orderModule.Order(HardwareType.Monitor, 1);
