@@ -1,6 +1,4 @@
-﻿using WriteTestableCode.Solutions._4._LSP___ISP;
-
-namespace WriteTestableCode.Solutions._5._DIP;
+﻿namespace WriteTestableCode.Solutions._5._DIP;
 
 public class ConsoleOutputService : IOutputService, IHasColor
 {
